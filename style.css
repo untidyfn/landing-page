@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+html[lang="zh"] body {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #070707;
+}
+
+/* Keep the narrow, centered look of the mockup */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* ---------- Navbar ---------- */
+.navbar .nav-link {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #828282;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #070707;
+}
+
+/* ---------- Fullscreen drawer (mobile menu) ---------- */
+.drawer-lang {
+    position: absolute;
+    inset-inline-end: 1.5rem;
+    bottom: 2rem;
+    writing-mode: vertical-rl;
+    font-size: .8rem;
+    font-weight: 600;
+    color: #828282;
+}
+
+@media (max-width: 991.98px) {
+    .drawer .nav-link {
+        font-size: 1.25rem;
+        padding-block: .6rem;
+    }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    padding-block: 2.5rem 4rem;
+}
+
+.hero-name {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.hero-meta {
+    font-size: .9rem;
+    color: #070707;
+}
+
+.lang-vertical {
+    writing-mode: vertical-rl;
+    font-size: .8rem;
+    font-weight: 600;
+    color: #828282;
+}
+
+.lang-vertical b {
+    color: #070707;
+}
+
+.hero-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+}
+
+@media (max-width: 991.98px) {
+    .hero {
+        padding-block: 1rem 2.5rem;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-img {
+        height: 420px;
+    }
+}
+
+/* ---------- Sections ---------- */
+.section {
+    padding-block: 4.5rem;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 480px;
+    margin-inline: auto;
+    text-align: center;
+    font-size: .9rem;
+    line-height: 1.9;
+}
+
+/* ---------- Skills ---------- */
+.skill-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.skill-badge.ps {
+    background: #001e36;
+    color: #31a8ff;
+}
+
+.skill-badge.ai {
+    background: #330000;
+    color: #ff9a00;
+}
+
+.skill-badge.ae {
+    background: #1f0040;
+    color: #b388ff;
+}
+
+.skill-name {
+    font-size: .72rem;
+    color: #828282;
+    line-height: 1.4;
+}
+
+.stars {
+    letter-spacing: 3px;
+    font-size: .85rem;
+}
+
+.stars .off {
+    color: #e5e5e5;
+}
+
+.stars .half {
+    background: linear-gradient(90deg, #070707 43%, #e5e5e5 43%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ---------- Portfolio ---------- */
+.portfolio-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform .3s ease;
+}
+
+.portfolio-figure {
+    overflow: hidden;
+}
+
+.portfolio-figure:hover .portfolio-img {
+    transform: scale(1.02);
+}
+
+.portfolio-link {
+    font-size: .85rem;
+    color: #070707;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.portfolio-link:hover {
+    color: #828282;
+}
+
+@media (max-width: 991.98px) {
+    .portfolio-img {
+        height: 220px;
+    }
+}
+
+/* ---------- Contacts ---------- */
+.social-link {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #070707;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #070707;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.social-link:hover {
+    background: #070707;
+    color: #fff;
+}
+
+.figure>img {
+    border: 0.1px solid lightslategrey;
+}
+
+.lang-btn {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: var(--fg-3);
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    color: var(--fg-body);
+    font-weight: 700;
+}
+
+.lang-sep {
+    margin-inline: .4rem;
+    color: var(--border-color);
+}
+
+.drawer-lang-switch {
+    position: absolute;
+    inset-inline-end: 1.5rem;
+    bottom: 2rem;
+    writing-mode: vertical-rl;
+    font-size: .8rem;
+}
+
+.lang-fade [data-i18n] {
+    animation: lang-in .3s ease;
+}
+
+@keyframes lang-in {
+    from {
+        opacity: .2
+    }
+
+    to {
+        opacity: 1
+    }
+}
